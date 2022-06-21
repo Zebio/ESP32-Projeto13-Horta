@@ -1,0 +1,24 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="data:,"></head><title>Projeto 10 - Gerador PWM controlado via Wireless</title><link rel="stylesheet" type="text/css" href="style.css" /><body><h2>Projeto 13 - Horta</h2><h3>Umidade Atual: 
+75 <!--umidade atual-->
+</h3><div class="wrap"><div class="fleft"><h3>Rodador de manhã</h3><form class="formulario" method="post"><label>Horário de ligar </label><input class="campo_hora" type="time" id="hora" name="freq" value=
+"06:00" <!--Horario_de_ligar_manha--
+autocomplete="off"><label><br><br></label><label>Umidade mínima:&#160; </label><input class="campo_duty" type="range" min="0" max="100" value=
+"40" <!--Umidade_minima_manha--
+id="myRange"><label> <span id="demo"></span>%</label><br><br><label>Umidade máxima:&#160; </label><input class="campo_duty" type="range" min="0" max="100" value=
+"80" <!--Umidade_maxima_manha--
+id="myRange2"><label> <span id="demo2"></span>%</label><br><br><input name="estado_ligado" class= "campo_saida" type="radio" 
+checked="checked" <!--if(estado_ligado_manha)--
+><label>Ligado </label><input name="estado_desligado" class= "campo_saida" type="radio"
+checked="checked" <!--if(estado_desligado_manha)--
+><label>Desligado </label><br><br><input class="btn_submit" type="submit" value="OK" name="pwm0"></form></div><div class="fright"><h3>Rodador de tarde</h3><form class="formulario" method="post"><label>Horário de ligar </label><input class="campo_hora" type="time" id="hora" name="freq" value=
+"18:00" <!--Horario_de_ligar_tarde--
+autocomplete="off"><label><br><br></label><label>Umidade mínima:&#160; </label><input class="campo_duty" type="range" min="0" max="100" value=
+"30" <!--Umidade_minima_tarde--
+id="myRange3"><label> <span id="demo3"></span>%</label><br><br><label>Umidade máxima:&#160; </label><input class="campo_duty" type="range" min="0" max="100" value=
+"80" <!--Umidade_maxima_tarde--
+id="myRange4"><label> <span id="demo4"></span>%</label><br><br><input name="estado_ligado" class= "campo_saida" type="radio"
+checked="checked" <!--if(estado_ligado_tarde)--
+><label>Ligado </label><input name="estado_desligado" class= "campo_saida" type="radio" 
+checked="checked" <!--if(estado_desligado_tarde)--
+><label>Desligado </label><br><br><input class="btn_submit" type="submit" value="OK" name="pwm0"></form></div></div><script>var slider = document.getElementById("myRange");var output = document.getElementById("demo");output.innerHTML = slider.value;slider.oninput = function() {output.innerHTML = this.value;};var slider2 = document.getElementById("myRange2");var output2 = document.getElementById("demo2");output2.innerHTML = slider2.value;slider2.oninput = function() {output2.innerHTML = this.value;};var slider3 = document.getElementById("myRange3");var output3 = document.getElementById("demo3");output3.innerHTML = slider3.value;slider3.oninput = function() 
+{output3.innerHTML = this.value;};var slider4 = document.getElementById("myRange4");var output4 = document.getElementById("demo4");output4.innerHTML = slider4.value;slider4.oninput = function() {output4.innerHTML = this.value;}</script></body></html>
